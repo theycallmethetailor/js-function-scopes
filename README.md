@@ -663,10 +663,12 @@ Expression functions
 - [Free Data Science Prep](https://www.galvanize.com/data-science-prep) - Galvanize
 - [Free Software Engineering Prep](https://www.galvanize.com/web-development/prep) - Galvanize
 
-https://github.com/getify/You-Dont-Know-JS
-https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures
+[https://github.com/getify/You-Dont-Know-JS](You-Dont-Know-JS)
+[You-Dont-Know-JS Scopes and Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures)
 
-https://medium.freecodecamp.org/function-hoisting-hoisting-interview-questions-b6f91dbc2be8
+[hoisting-interview-questions](https://medium.freecodecamp.org/function-hoisting-hoisting-interview-questions-b6f91dbc2be8)
+
+[Work through problems here](https://repl.it/@SageElliott/scopesProblems)
 
 
 
