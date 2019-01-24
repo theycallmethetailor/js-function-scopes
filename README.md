@@ -28,7 +28,7 @@ Interested in learnig more about our Galvanize programs reach out to Lauren @ [l
 
 
 ## About me:
-I'm [Sage Elliott](http://sageelliott.com/). I'm a Technology Evangelist at Galvanize Seattle. In the past decade I've worked as a software and hardware engineer with mostly with Startups and Agencies in Seattle and Central Florida. I love technology! I'm currently learning more about Deep Learning & Computer Vision.
+I'm [Sage Elliott](http://sageelliott.com/). I'm a Technology Evangelist at Galvanize Seattle. In the past decade I've worked as a software and hardware engineer with mostly with Startups and Agencies in Seattle and Central Florida. I love technology! I'm currently learning more about Deep Learning & Computer Vision. If you're looking for a job or next steps in learning, let me know!
 
 *caveat* I'm not an Galvanize instructor, They have much more industry experience and are better at teaching difficult topics!
 
@@ -55,7 +55,7 @@ One of the best things about these in person workshops is being able to meet new
 
 A super friendly introduction to JavaScript Functions and Scopes. Some of the javaScript weirdness!
 
-You can't learn EVERYTHING in ~2 hours. But you can learn enough to get excited and comfortable to keep working and learning on your own!
+You can't learn EVERYTHING in ~2 hours. But you can learn enough to get excited and comfortable to keep working and learning on your own! This workshop will introduce you to concepts you'll encounter later in your learning journey or career (and sometimes interviews)
 
 - This course is for absolute beginners
 - Ask Questions!
@@ -65,11 +65,6 @@ You can't learn EVERYTHING in ~2 hours. But you can learn enough to get excited 
 - Feel free to move ahead
 - Be patient and nice
 
-### Challenges:
-
-Get the most out of this workkshop! We'll occasionally do a "CHALLENGE" where I give you an exercise to do in several minutes. It can be even more effective to partner up with someome next to you, but you can work on your own if you want. No pressure to solve the challenge. I'll share how I would solve it after the time is up. 
-
-https://repl.it/@SageElliott/jsFunStuff
 
 ## What is javaScript?
 
@@ -175,168 +170,490 @@ greeting = "bye"
 console.log(greeting)
 ```
 
-#####  functions
+Essentially `let` and `const` are considred "safer" to use.
 
+#####  Functions
+
+Reduce, Reuse, Recycle
+
+Functions make it easy to reuse code. If you find yourself repeating code you may want to turn it into a function!
+
+Example: these functions take in two arguments(a, b) and returns the value of them added together.
+
+
+
+You'll see two common ways of creating a function called `Declaration` and `Expression`. We'll go into the differences with these types later when we get into scoping. Just remember there are two types!
+
+
+Declaration:
 
 ```
-
-let greeting = "hello"
-
-function greet (saying) {
-  console.log(saying)
+function add(a, b) {  
+  return a + b
 }
-
-greet(greeting)
+add(2, 3)
 
 ```
+
+
+Expression:
+
+```
+var sum = function(a, b) {  
+  return a + b
+}
+sum(2, 3)
+
+```
+
+## Hoisting
+
+We're going to just cover the basic of *hoisting* in javascript. This can help with understanding scopes. 
+
 
 
 #### JavaScript Runtime
 
-How does JavaScript run.
+When you run javaScript there are essentially two steps that happen:
+
+1. Variables are declared in memory 
+2. Then the code is actually executed
 
 below we will see an example of what we just talked about:
 
-### Hoisting in action 
-What is hoisting exactly
+Due to the way javaScript runs(see above), it can cause some interesting things to happen! 
 
-### Variables hoisting in action
+Hoisting basically happens at step one. When variables are decaraed in memory it will "hoist" them up to the top of their scopes. The effects variables decalred with `var` and declartive functions. We'll see what this all means soon!
+
+### Variable hoisting in action
+
+`var`
+
+What do you think will happen when we run this code? Lets run it in [repl](https://repl.it).
+
+
+```
+console.log(greeting)
+
+var greeting = "hello"
+
+console.log(greeting)
+
+```
+ 
+ It didn't throw an error! This is because of *hoisting*. The variable `greeting` gets declared in computer memory before we run the code. So the first `console.log()` will run just fine even though greeting does not have an assigned value to it.  
+ 
+Visualizinig it how it looks to the computer is something like this:
+ 
+```
+var greeting;
+
+console.log(greeting);
+
+greeting = "hello";
+
+console.log(greeting);
+```
+
+Does it work with `let` and `const`?
+
+
+`let`
+
+```
+console.log(greeting)
+
+let greeting = "hello"
+
+console.log(greeting)
 
 ```
 
+`const`
+
 ```
+console.log(greeting)
+
+const greeting = "hello"
+
+console.log(greeting)
 
 ```
 
-```
+`let` and `const` get treated differently.
 
-```
+To keep it simple you can remeber that `let` and `const` cannot be accessed before they are declared. 
 
-```
-
-technically `let` & `const` get hoisted, but are caught is something called the *temporal dead zone*. Read more about that [here](
+Technically they do get hoisted, but are caught is something called the *temporal dead zone*(a period between entering scope and being declared where they cannot be accessed). Read more about that [here](
 https://stackoverflow.com/questions/31219420/are-variables-declared-with-let-or-const-not-hoisted-in-es6).
 
-### Variable block level declaration
+
+### Function Hoisting in action!
+
+Similar to variables, functions also have get hoisted.
+
+Lets see how it behaves with a Declaration function:
+
+```
+add(2, 3)
+function add(a, b) {  
+  return a + b
+}
+add(2, 3)
+
+```
+Declaration functions DO get hoisted.
+
+
+Lets see how it behaves with a Expression funcions:
+
+We'll try with both `var` and `let`
+
+```
+sum(2, 3)
+var sum = function(a, b) {  
+  return a + b
+}
+sum(2, 3)
+
+```
+
+```
+sum(2, 3)
+let sum = function(a, b) {  
+  return a + b
+}
+sum(2, 3)
+
+```
+
+Expression funcions do NOT get hoisted. 
+
+Because of hositing can get confusing in a larger codebase [here is a long article suggesting to us Function Expression over declaration](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/). 
+
+<!--### using return 
+console log vs return-->
+
+
+<!--### Function Challenges
+-->
+
+## Scopes
+
+### Scope
+
+What is a Scope?
+
+Put simply a scope in JavaScript defines what variables you have access to.
+
+Two types of scopes exsist:
+
+1. Global Scope
+2. Local Scopes
+
+### Global Scope
+
+What is global Scope?
+
+Something with Global scope means you can access it anywhere in your code. Usually it will not be defined inside any function or curly brackets `{}`
+
+##### Global Variables
+
+
+```
+var globalVariableOne = 'hello 1'
+let globalVariableTwo = 'hello 2'
+const globalVariableThree = 'hello 3'
+
+function greeting() {
+  console.log(globalVariableOne)
+  console.log(globalVariableTwo)
+  console.log(globalVariableThree)
+}
+
+greeting()
+
+```
+
+Above are examples of global variables. You will be able to access these variables anywhere in your code. including functions. *Note that we did not have to even pass these into our functions.*
+
+
+Often best practice to not use global variables when possible. This will decreases the chance of developers changing variables by accident in other parts of the code or variable name collision. When you're working as a developer chances are your code base may be massive and you will not exactly know all the variables names.
+
+##### name collision example:
+
+Lets try these out in repl to see what happens
+
+```
+let globalvar = 'hello'
+let globalvar = 'by'
+```
+
+```
+var globalvar = 'hello'
+var globalvar = 'by'
+```
+
+This is a good example why `let` is safer to use. It atleast lets you know when you're re-declaring it. 
+
+
+### Local Scope
+
+Anything with a local scope can only be used in that part of the code. CANNOT be accessed everywhere in your code. There are two types of local scopes
+
+1. Function scope
+2. block scopes
+
+
+
+### Function Scope
+
+Functions scopes occur when you declare a variable inside of a function
+
+this example created a local variable and calls it inside the function and outside of the function. What do you think will happen?
+
+```
+function greeting () {
+  const say = 'hello'
+  console.log(say)
+}
+
+greeting()
+console.log(say)
+```
+
+Here is the same thing except the varible is global. What do you think will happen this time if we run this?
+
+```
+const say = 'hello'
+function greeting () {
+  console.log(say)
+}
+
+greeting()
+console.log(say)
+```
+
+
+### Block Scope
 
 Introduced in  ES6 (newer version of JavaScript)
 
 We can use block level declaration with `let` and `cost`
 
 ```
+{
+  const say = 'hello'
+  console.log(say)
+}
+
+console.log(say)
 ```
 
-```
-```
-
-
-## JavaScript Functions:
-
-### Function Hoisting in action!
+Again if we move the variable outside of the brackets this will make it global.
 
 ```
-
-```
-
-### using return 
-console log vs return
-
-### Function Challenges
-
-
-## JavaScript Scopes
-
-### Scope
-
-What is a Scope?
-
-
-
-
-### Global Scope
-
-##### Global Variables
-
-A good way know if your variables are not global when writting code is look if variables are inside of a function or inside a set of curly brackets `{variable}`. If the variable is not in either of those it would be global and accessible anywhere in your code.
-
-Global Variables:
-
-```
-var globalVariable = 'hello'
-let globalVariable = 'hello'
-const globalVariable = 'hello'
-```
-
-Above are examples of global variables. You will be able to access these variables anywhere in your code. including functions
-
-```
-let globalVariable = 'hello'
-
-function example
-```
-
-often best practice to not use global variables when possible. 
-
-```
-Show 
-Conflict & overwritting
-
+  const say = 'hello'
+{
+  console.log(say)
+}
+console.log(say)
 ```
 
 
-### Local Variables
+### Scopes with functions 
 
+We talked about hoisting in functions. When the function is declared it gets hoisted to the top of the scope its in. Which can be confusing when debugging / developing. Hence why most people say using the function expression is safer. Note that this is probably debatable and may depend on your team. They should probably all at least be consistent. 
 
-### Function Scope
-
-```
-Function example
-```
-
-
-### Block Scope
+##### Functions cannot access local variables from other functions
 
 ```
-Block Example
+function one () {
+  const oneVar = `Hello, this is oneVar`
+}
+
+function two () {
+  one()
+  console.log(oneVar)
+}
+
+two()
+```
+
+If you're new to programming this and wondering, well how would I get that value into another function to actually do something with it???
+
+```
+function one () {
+  const oneVar = `Hello, this is oneVar`
+  return oneVar
+}
+
+function two () {
+  console.log(one()) 
+}
+
+two()
 ```
 
 
-### Function hoisting 
 
-how effects scopes 
+### Lexical scoping
+
+Lexical scopes are nested scopes. Example a function inside of a function. the inner function has access to the outer functions variables, but the outer function cannot access the inner function variables.
+
+Think of this as only having one way street from the inner function. It can move out and look at whats in th outer function. But the outer function cannot move into the inner function
 
 
-### lexical scoping
+Here we will try to print the inner variable from the outer function. Can you guess what will happen?
 
+```
+function outer () {
+  const outerVar = `Hello, this is outerVar`
 
-### Scopes Challenge
+  function inner() {
+    const innerVar = `Hello, this is innerVar`
+    console.log(outerVar) 
+  }
 
-fix this bug
+console.log(innerVar)
+}
 
-fix this bug
+outer()
 
-fix this bug
+```
+
+Here we will print the outer variable from the inner function. Based on what we talked about what do you think will happen?
+
+```
+function outer () {
+  const outerVar = `Hello, this is outerVar`
+
+  function inner() {
+    const innerVar = `Hello, this is innerVar`
+    console.log(outerVar) 
+  }
+
+inner()
+}
+
+outer()
+
+```
+
 
 
 ## JavaScript Closures
 
 What is a closure?
 
-### Closure challenge
+A closure a inner function with access to the outer (enclosing) function’s variables(aka scope chain).
 
-Make a closure to fix bug
+Reiterating: When a function is created inside of another function thats called a closure. Often the inner function(closure) is used to return values. It has access to its outer scope variables and to global variables. 
 
+
+```
+let globalVar ="Hello, this is globalVar";
+function outer () {
+  const outerVar = `Hello, this is outerVar`;
+
+  function inner() {
+    const innerVar = `Hello, this is innerVar`;
+    console.log(outerVar) 
+    console.log(innerVar)
+    console.log(globalVar)
+  }
+
+return inner()
+}
+
+outer()
+```
+
+
+##### Private variables
+
+the variables inside the scope of a function that cannot be accessed outside of it are often called private variables. 
+
+Returning the function with private variables similar to above allows you get access to the variables in parts of your code that you want. 
+
+
+there is a lot more to learn about closures, this is just the basics. checkout these resoures:
+
+more about closure interview questions:
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36
 
 ## Wrap up
 
+
+### Lets Review:
+
 <details>
-  <summary>let and const are both special because...</summary>
-	`let` and `const` declarations don't hoist like `var` and `function` declarations.
+  <summary>What is a Scope?</summary>
+	a scope in JavaScript defines what variables you have access to
+</details>
+
+<details>
+  <summary>What is a global scope?</summary>
+	Something with global scope means you can access it anywhere in your code. 
 </details>
 
 
+<details>
+  <summary>What is a local scope?</summary>
+	a local scope can only be used in that part of the code. CANNOT be accessed everywhere in your code.
+</details>
 
-### Interview type questions:
+
+<details>
+  <summary>What is hoisting?</summary>
+  Hoisting basically happens at step one. When variables are decaraed in memory it will "hoist" them up to the top of their scopes. The effects variables decalred with `var` and declartive functions.
+</details>
+
+
+<details>
+  <summary>What type of function does not get hoisted?</summary>
+	Expression funcions
+</details>
+
+
+<details>
+  <summary>What is the temporal dead zone?</summary>
+	a period between entering scope and being declared where they cannot be accessed
+</details>
+
+
+<details>
+  <summary>let and const are diffent from let because..?</summary>
+	They do not get hoisted the same way as `var` they also throw name collision erros. 
+</details>
+
+
+<details>
+  <summary>What is special about const </summary>
+		`const` value cannot be changed later in the code. It will throw an error if you try.
+</details>
+
+<details>
+  <summary>What is a closure? </summary>
+  A closure is inner function that access to the outer (enclosing) function’s variables(scope chain).
+	
+</details>
+
+<details>
+  <summary>What is lexical scoping?</summary>
+  Lexical scopes are nested scopes. Example a function inside of a function. the inner function has access to the outer functions variables, but the outer function cannot access the inner function variables.
+	
+</details>
+
+What type of function declaration is usually considred less confusing/safer?
+
+Expression funcions
+
+<details>
+  <summary>What are the two things that happen when JavaScript runs </summary>
+  1. Variables are declared in memory 
+	2. Then the code is actually executed
+</details>
 
 
 
@@ -348,6 +665,8 @@ Make a closure to fix bug
 
 https://github.com/getify/You-Dont-Know-JS
 https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures
+
+https://medium.freecodecamp.org/function-hoisting-hoisting-interview-questions-b6f91dbc2be8
 
 
 
@@ -381,9 +700,8 @@ Visit the [Learn to code Seattle](https://www.meetup.com/Learn-Code-Seattle/) me
 
 ## Questions
 
-Please feel free to reach out to me with any questions!
+Please feel free to reach out to me with any questions! Let me know what you're planning to do next and how I can help!
 
-This was only my 2nd time running this workshop, help improve it by giving me feedback :)
 
 - Website: [sageelliott.com](http://sageelliott.com/)
 - Twitter: [@sagecodes](https://twitter.com/@sagecodes)
