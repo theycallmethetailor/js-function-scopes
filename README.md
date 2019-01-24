@@ -1,6 +1,6 @@
 # JavaScript Functions & Scopes 
 
-## short URL to this repo [jsfunc.sage.codes](https://github.com/sagecodes/into-to-sql)
+## short URL to this repo [jsfunc.sage.codes](https://github.com/sagecodes/js-function-scopes)
 
 ## Setting up your computer:
 
@@ -21,7 +21,7 @@ Upcoming JavaScript workshops:
 
 We're an awesome community!!! 
 
-Interested in learnig more about our Galvanize programs reach out to Lauren @ [lauren.lark@galvanize.com](mailto:lauren.lark@galvanize.com)
+Interested in learning more about our Galvanize programs reach out to Lauren @ [lauren.lark@galvanize.com](mailto:lauren.lark@galvanize.com)
 
 
 ## Setting up
@@ -72,7 +72,7 @@ You can't learn EVERYTHING in ~2 hours. But you can learn enough to get excited 
 
 "The relationship between Java and JavaScript is almost exactly like that between grapes and grapefruit"
 
-Java is an entirly different programming language.
+Java is an entirely different programming language.
 
 
 ### A very brief history
@@ -155,7 +155,7 @@ console.log(greeting)
 
 #####  Const
 
-Const is used to declare variables you do not want to change later in your code. This helps yourself and other developers working on your team prevent accidentally re-writting a variables that was not supposed to be.  
+Const is used to declare variables you do not want to change later in your code. This helps yourself and other developers working on your team prevent accidentally rewriting a variables that was not supposed to be.  
 
 What will happen when we try to overwrite the variable in the below example?
 
@@ -170,7 +170,7 @@ greeting = "bye"
 console.log(greeting)
 ```
 
-Essentially `let` and `const` are considred "safer" to use.
+Essentially `let` and `const` are considered "safer" to use.
 
 #####  Functions
 
@@ -223,7 +223,7 @@ below we will see an example of what we just talked about:
 
 Due to the way javaScript runs(see above), it can cause some interesting things to happen! 
 
-Hoisting basically happens at step one. When variables are decaraed in memory it will "hoist" them up to the top of their scopes. The effects variables decalred with `var` and declartive functions. We'll see what this all means soon!
+Hoisting basically happens at step one. When variables are declared in memory it will "hoist" them up to the top of their scopes. The effects variables declared with `var` and declarative functions. We'll see what this all means soon!
 
 ### Variable hoisting in action
 
@@ -243,7 +243,7 @@ console.log(greeting)
  
  It didn't throw an error! This is because of *hoisting*. The variable `greeting` gets declared in computer memory before we run the code. So the first `console.log()` will run just fine even though greeting does not have an assigned value to it.  
  
-Visualizinig it how it looks to the computer is something like this:
+Visualizing it how it looks to the computer is something like this:
  
 ```
 var greeting;
@@ -282,7 +282,7 @@ console.log(greeting)
 
 `let` and `const` get treated differently.
 
-To keep it simple you can remeber that `let` and `const` cannot be accessed before they are declared. 
+To keep it simple you can remember that `let` and `const` cannot be accessed before they are declared. 
 
 Technically they do get hoisted, but are caught is something called the *temporal dead zone*(a period between entering scope and being declared where they cannot be accessed). Read more about that [here](
 https://stackoverflow.com/questions/31219420/are-variables-declared-with-let-or-const-not-hoisted-in-es6).
@@ -305,7 +305,7 @@ add(2, 3)
 Declaration functions DO get hoisted.
 
 
-Lets see how it behaves with a Expression funcions:
+Lets see how it behaves with a Expression functions:
 
 We'll try with both `var` and `let`
 
@@ -327,9 +327,9 @@ sum(2, 3)
 
 ```
 
-Expression funcions do NOT get hoisted. 
+Expression functions do NOT get hoisted. 
 
-Because of hositing can get confusing in a larger codebase [here is a long article suggesting to us Function Expression over declaration](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/). 
+Because of hoisting can get confusing in a larger codebase [here is a long article suggesting to us Function Expression over declaration](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/). 
 
 <!--### using return 
 console log vs return-->
@@ -346,7 +346,7 @@ What is a Scope?
 
 Put simply a scope in JavaScript defines what variables you have access to.
 
-Two types of scopes exsist:
+Two types of scopes exists:
 
 1. Global Scope
 2. Local Scopes
@@ -394,7 +394,7 @@ var globalvar = 'hello'
 var globalvar = 'by'
 ```
 
-This is a good example why `let` is safer to use. It atleast lets you know when you're re-declaring it. 
+This is a good example why `let` is safer to use. It at least lets you know when you're re-declaring it. 
 
 
 ### Local Scope
@@ -422,7 +422,7 @@ greeting()
 console.log(say)
 ```
 
-Here is the same thing except the varible is global. What do you think will happen this time if we run this?
+Here is the same thing except the variable is global. What do you think will happen this time if we run this?
 
 ```
 const say = 'hello'
@@ -501,7 +501,7 @@ two()
 
 Lexical scopes are nested scopes. Example a function inside of a function. the inner function has access to the outer functions variables, but the outer function cannot access the inner function variables.
 
-Think of this as only having one way street from the inner function. It can move out and look at whats in th outer function. But the outer function cannot move into the inner function
+Think of this as only having one way street from the inner function. It can move out and look at whats in the outer function. But the outer function cannot move into the inner function
 
 
 Here we will try to print the inner variable from the outer function. Can you guess what will happen?
@@ -577,7 +577,7 @@ the variables inside the scope of a function that cannot be accessed outside of 
 Returning the function with private variables similar to above allows you get access to the variables in parts of your code that you want. 
 
 
-there is a lot more to learn about closures, this is just the basics. checkout these resoures:
+there is a lot more to learn about closures, this is just the basics. checkout these resources:
 
 more about closure interview questions:
 https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36
@@ -606,13 +606,13 @@ https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-cl
 
 <details>
   <summary>What is hoisting?</summary>
-  Hoisting basically happens at step one. When variables are decaraed in memory it will "hoist" them up to the top of their scopes. The effects variables decalred with `var` and declartive functions.
+  Hoisting basically happens at step one. When variables are declared in memory it will "hoist" them up to the top of their scopes. The effects variables declared with `var` and declarative functions.
 </details>
 
 
 <details>
   <summary>What type of function does not get hoisted?</summary>
-	Expression funcions
+	Expression functions
 </details>
 
 
@@ -623,8 +623,8 @@ https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-cl
 
 
 <details>
-  <summary>let and const are diffent from let because..?</summary>
-	They do not get hoisted the same way as `var` they also throw name collision erros. 
+  <summary>let and const are different from let because..?</summary>
+	They do not get hoisted the same way as `var` they also throw name collision error. 
 </details>
 
 
@@ -645,9 +645,9 @@ https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-cl
 	
 </details>
 
-What type of function declaration is usually considred less confusing/safer?
+What type of function declaration is usually considered less confusing/safer?
 
-Expression funcions
+Expression functions
 
 <details>
   <summary>What are the two things that happen when JavaScript runs </summary>
@@ -689,7 +689,7 @@ Visit the [Learn to code Seattle](https://www.meetup.com/Learn-Code-Seattle/) me
 
 #### Part-Time Courses
 
-- [Data Analyitcs](https://www.galvanize.com/part-time/data-analytics) 2/12/19 - 5/2/19
+- [Data Analytics](https://www.galvanize.com/part-time/data-analytics) 2/12/19 - 5/2/19
 - [Python Fundamentals](https://www.galvanize.com/part-time/data-science-fundamentals) - 2/20/19 - 3/29/19
 
 #### Co-working Space
