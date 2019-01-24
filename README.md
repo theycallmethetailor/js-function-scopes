@@ -4,8 +4,8 @@
 
 ## Setting up your computer:
 
-- Open your web browser. I'll be using [chrome](https://www.google.com/chrome/), but  you can use [Safari](https://www.apple.com/safari/) or [Opera](https://www.opera.com/)(browsers that support [Web SQL](https://en.wikipedia.org/wiki/Web_SQL_Database)). 
-- to speed up learning we're going to use an [online editor and database](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all) for SQL from [W3Schools](https://www.w3schools.com/). 
+- Open your web browser. I'll be using [chrome](https://www.google.com/chrome/), but  you can use whatever one you want.
+- go to [repl.it](https://repl.it/repls) and create a new JavsScript repo
 
 That was easy!
 
