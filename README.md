@@ -16,9 +16,6 @@ That was easy!
 
 We create a technology ecosystem for learners, entrepreneurs, startups, and established companies to meet the needs of the rapidly changing digital world.
 
-Upcoming JavaScript workshops:
-
-
 We're an awesome community!!! 
 
 Interested in learning more about our Galvanize programs reach out to Lauren @ [lauren.lark@galvanize.com](mailto:lauren.lark@galvanize.com)
@@ -28,16 +25,14 @@ Interested in learning more about our Galvanize programs reach out to Lauren @ [
 
 
 ## About me:
-I'm [Sage Elliott](http://sageelliott.com/). I'm a Technology Evangelist at Galvanize Seattle. In the past decade I've worked as a software and hardware engineer with mostly with Startups and Agencies in Seattle and Central Florida. I love technology! I'm currently learning more about Deep Learning & Computer Vision. If you're looking for a job or next steps in learning, let me know!
+I'm [Mandy Everett](https://www.linkedin.com/in/amanda-everett/). I'm a Web Developement Immersive student here at Galvanize Phoenix. 
 
-*caveat* I'm not an Galvanize instructor, They have much more industry experience and are better at teaching difficult topics!
+I took the plunge to learn coding full-time this past October, and I hope I can help out by sharing what others have taught me. 
 
-If you have an event you would like to see or put on let me know! I'm always looking for ideas. Talk to me after the workshop or find me online at one of these:
+*caveat* I'm not an Galvanize instructor, they have much more industry experience and are better at teaching difficult topics!
 
-- Website: [sageelliott.com](http://sageelliott.com/)
-- Twitter: [@sagecodes](https://twitter.com/@sagecodes)
-- LinkedIn: [sageelliott](https://www.linkedin.com/in/sageelliott/) 
-- Email: [sage.elliott@galvanize.com](mailto:sage.elliott@galvanize.com)
+- LinkedIn: [mandyeverett](https://www.linkedin.com/in/amanda-everett/) 
+- Email: [amanda.everett.works@gmail.com](mailto:amanda.everett.works@gmail.com)
 
 
 ## About you!
