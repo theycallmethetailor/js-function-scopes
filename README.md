@@ -1,7 +1,5 @@
 # JavaScript Functions & Scopes 
 
-## short URL to this repo [jsfunc.sage.codes](https://github.com/sagecodes/js-function-scopes)
-
 ## Setting up your computer:
 
 - Open your web browser. I'll be using [chrome](https://www.google.com/chrome/), but  you can use whatever one you want.
