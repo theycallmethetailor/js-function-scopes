@@ -116,7 +116,7 @@ We'll do a quick refresher on some javaScript Basics that we need to know for th
 
 ### Variables
 
-These are three ways of creating a variable.
+There are three ways of creating a variable.
 
 ##### var
 
