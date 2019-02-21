@@ -16,7 +16,7 @@ We create a technology ecosystem for learners, entrepreneurs, startups, and esta
 
 We're an awesome community!!! 
 
-Interested in learning more about our Galvanize programs reach out to Lauren @ [lauren.lark@galvanize.com](mailto:lauren.lark@galvanize.com)
+Interested in learning more about our Galvanize programs reach out to Lauren @ [lara.sadri@galvanize.com](mailto:lara.sadri@galvanize.com)
 
 
 ## Setting up
