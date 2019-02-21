@@ -672,7 +672,7 @@ Expression functions
 
 - [Net Ninja Youtube Channel](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 
--[Free Code Camp](https://www.freecodecamp.org/)
+- [Free Code Camp](https://www.freecodecamp.org/)
 
 - [hoisting interview questions](https://medium.freecodecamp.org/function-hoisting-hoisting-interview-questions-b6f91dbc2be8)
 
