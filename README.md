@@ -664,6 +664,16 @@ Expression functions
 
 - [You-Dont-Know-JS Scopes and Closures](https://github.com/getify/You-Dont-Know-JS/tree/master/scope%20%26%20closures)
 
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
+
+- [W3Schools Web Docs](https://www.w3schools.com/js/default.asp)
+
+- [Khan Academy](https://www.khanacademy.org/)
+
+- [Net Ninja Youtube Channel](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+
+-[Free Code Camp](https://www.freecodecamp.org/)
+
 - [hoisting interview questions](https://medium.freecodecamp.org/function-hoisting-hoisting-interview-questions-b6f91dbc2be8)
 
 - [Work through problems here](https://repl.it/@SageElliott/scopesProblems)
